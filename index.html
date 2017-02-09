@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head lang="en">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>CSS parallax demo</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+
+  <body>
+    <div class="debug">
+      <label><input type="checkbox"> Debug</label>
+    </div>
+
+    <div class="parallax">
+      <div id="group1" class="parallax_group">
+        <div class="parallax_layer parallax_layer--fore">
+          <div class="title">
+            <h1>Bacon Ipsum</h1>
+            <h6>Pork Loin Ipsum sizzler</h6>
+          </div>
+        </div>
+        <div class="parallax_layer parallax_layer--base"></div>
+      </div>
+
+       <div id="group2" class="parallax_group">
+        <div class="parallax_layer parallax_layer--fore">
+          <p>Group 2 Foreground: Bacon Ipsum</p>
+        </div>
+        <div class="parallax_layer parallax_layer--base">
+          <!-- <div class="title">Group 2 Base Layer</div> -->
+        </div>
+        <div class="parallax_layer parallax_layer--back">
+          <!-- <div class="title">Group 2 Background Layer</div> -->
+        </div>
+      </div>
+
+      <div id="group3" class="parallax_group">
+        <div class="parallax_layer parallax_layer--fore">
+          <p>Group 3 Foreground: Bacon Ipsum</p>
+        </div>
+        <div class="parallax_layer parallax_layer--base">
+          <!-- <div class="title">Group 3 Base Layer</div> -->
+        </div>
+      </div>
+
+      <div id="group4" class="parallax_group">
+        <div class="parallax_layer parallax_layer--fore">
+          <p>Group 4 Foreground: Bacon Ipsum</p>
+        </div>
+        <div class="parallax_layer parallax_layer--base">
+          <div class="title">Group 4 Base Layer</div>
+        </div>
+
+        <!--<div class="parallax_layer parallax_layer--back">
+          <div class="title">Group 4 Background</div>
+        </div> -->
+        <!-- <div class="parallax_layer parallax_layer--deep">
+          <div class="title">Group 4 Deep Background Layer</div>
+        </div> -->
+      </div>
+    </div>
+
+    <script>
+      "use strict";
+      const debugInput = document.querySelector("input");
+      const updateDebugState = function() {
+        // add "debug-on" to the body's classList
+        document.body.classList.toggle('debug-on', debugInput.checked);
+      }
+      debugInput.addEventListener("click", updateDebugState, false);
+      updateDebugState();
+    </script>
+  </body>
+</html>
